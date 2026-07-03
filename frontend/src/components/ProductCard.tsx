@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Product } from "@/types";
-import { useStore } from "@/store/useStore";
+import { Button } from "./ui/button";
+import { Product } from "../types";
+import { useStore } from "../store/useStore";
 import { toast } from "sonner";
 
 interface ProductCardProps {

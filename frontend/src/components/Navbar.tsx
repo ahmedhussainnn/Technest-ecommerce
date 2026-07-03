@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart, Search, Plus, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useStore } from "@/store/useStore";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { useStore } from "../store/useStore";
 import { useState } from "react";
 
 const Navbar = () => {

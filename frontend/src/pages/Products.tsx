@@ -1,11 +1,17 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ProductCard from "@/components/ProductCard";
-import { useStore } from "@/store/useStore";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import ProductCard from "../components/ProductCard";
+import { useEffect } from "react";
+import { useStore } from "../store/useStore";
+
 
 const Products = () => {
-  const { getFilteredProducts, searchQuery } = useStore();
-  const products = getFilteredProducts();
+  const { getFilteredProducts, searchQuery, fetchProducts } = useStore();
+const products = getFilteredProducts();
+
+useEffect(() => {
+  fetchProducts();
+}, [fetchProducts]);
 
   return (
     <div className="min-h-screen flex flex-col">
